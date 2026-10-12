@@ -24,7 +24,7 @@ app.get("/", async (req, res) => {
     const containerName = os.hostname();
     console.log("os hostname: ", os.hostname());
     const ip = containerIp.split(":")[3];
-    const version = 2;
+    const version = 5;
     const bgColor = BACKGROUND_COLOR;
     const html = `
     <html>
@@ -32,7 +32,7 @@ app.get("/", async (req, res) => {
       <title>Application Demo</title>
     </head>
     <body style='background-color: ${bgColor}; color: wheat;text-align: center;'>
-      <h1 style='color: orange'>Welcome to AWS - V1.2</h1>
+      <h1 style='color: orange'>Welcome to AWS</h1>
       <h3>Container name: <span style='color: pink'>${containerName}</span></h3>
       <h3>Container's IP Address: <span style='color: pink'>${ip}</span></h3>
       <h3>Application Version: <span style='color: coral'>V${version}</span></h3>
